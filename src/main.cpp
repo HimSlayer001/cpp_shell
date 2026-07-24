@@ -12,9 +12,22 @@ while(true)
 //what i need to do is take input from the user
 
   std::string command;
-  std::getline(std::cin,command);
 
+  if(!std::getline(std::cin,command))
+  {
+break;
+  }
+
+  if(command=="exit"||command=="EXIT"||command=="Exit")
+  {
+break;
+  }
+  if(command.empty())
+  {
+    continue;
+  }
   std::cout << command <<": command not found"<< std:: endl;
 }
 
  }
+

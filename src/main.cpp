@@ -8,16 +8,17 @@ int main() {
 while(true)
 {
   // TODO: Uncomment the code below to pass the first stage
-  std::cout << "$ ";
+  std::cout << "$";
 //what i need to do is take input from the user
 
   std::string command;
 
-  if(command=="exit"||"EXIT" ||"Exit")
+  if(!std::getline(std::cin,command))
   {
 break;
   }
-  if(!std::getline(std::cin,command))
+
+  if(command=="exit"||command=="EXIT"||command=="Exit")
   {
 break;
   }
